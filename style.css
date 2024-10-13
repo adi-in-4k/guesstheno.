@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* inherit ke bajay direct border-box use karte hain */
+}
+
+body {
+  background-color: #222;
+  font-family: Georgia, "Times New Roman", Times, serif; /* missing semicolon ko add kiya */
+  font-style: normal;
+  color: #eee;
+  line-height: 1.6; /* readability ke liye line-height add kiya */
+  margin: 0;
+}
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+  display: flex; /* Flexbox for better content alignment */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  color: #eee;
+  align-items: center;
+  justify-content: space-around;
+  height: 65vh;
+  padding: 20px; /* some padding for spacing */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.btncheck,
+.btnagain {
+  background-color: #eee;
+  color: #222;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5vh;
+  margin: 10px;
+  cursor: pointer; /* pointer cursor for buttons */
+  transition: background-color 0.3s ease; /* smooth transition */
+}
+
+.btncheck:hover,
+.btnagain:hover {
+  background-color: #ccc; /* hover effect */
+}
+
+.guess {
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 5vh;
+  background-color: #444; /* background for guess input */
+  color: #eee;
+  border: none; /* remove default border */
+  outline: none; /* remove default outline */
+  text-align: center; /* center text */
+}
+
+.message {
+  height: 50px;
+  margin-bottom: 80px;
+  font-size: 50px;
+  text-align: center; /* center text */
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  padding: 50px;
+  margin: 5px;
+  background-color: aqua;
+  margin-bottom: 10px;
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+h1 {
+  font-size: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px; /* some margin for spacing */
+}
+
+.to-the-right {
+  position: absolute; /* ya 'fixed' agar scroll ke saath move nahi karna chahte */
+  right: 0; /* ye element ko viewport ke right edge se align karta hai */
+  top: 50%; /* isse element vertically half way pe hoga, adjust karo as needed */
+  transform: translateY(
+    -50%
+  ); /* isse element ko vertically center mei align karte hain from its top position */
+  font-size: 30px;
+  font-weight: 200;
+  padding: 10px;
+  background-color: #444; /* background color */
+  color: #eee;
+  border-radius: 5px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* smooth transition for hover effect */
+}
+
+.to-the-right:hover {
+  transform: translateY(-50%) scale(1.1); /* slight scale effect on hover */
+  background-color: #666; /* hover effect */
+}
