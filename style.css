@@ -119,3 +119,7 @@ h1 {
   transform: translateY(-50%) scale(1.1); /* slight scale effect on hover */
   background-color: #666; /* hover effect */
 }
+
+ .hidden-element {
+   display: none; /* hide this element initially */
+ }
